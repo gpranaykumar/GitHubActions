@@ -32,6 +32,7 @@ jobs:
         browser: [Chrome, Edge, Firefox]
      steps:
        - name: test
+         shell: pwsh
          run: | 
            Wriite-Host "Hello "
            Write-Host ${{matrix.os}}
