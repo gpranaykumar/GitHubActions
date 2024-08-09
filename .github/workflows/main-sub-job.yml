@@ -15,6 +15,6 @@ jobs:
           # Add your initial steps here
 
       - name: Run Composite Action
-        uses: GitHubActions/.github/actions/sub-action@main
+        uses: ./.github/actions/sub-action@main
         with:
           example_input: 'value'
