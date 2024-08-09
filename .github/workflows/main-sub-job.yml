@@ -1,27 +1,20 @@
 name: Workflow with Main and using Sub-Jobs
- 
 on:
   workflow_dispatch:
- 
+
 jobs:
   main-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
- 
+
       - name: Initial steps
         run: |
           echo "Performing initial steps"
           # Add your initial steps here
- 
-      - name: Run Sub-Job 1
-        id: subjob1
-        uses: ./.github/workflows
-        # Alternatively, use an action to trigger sub-job 1 if it's a separate action
- 
-      - name: Complete main job
-        run: |
-          echo "Completing main job"
-          # Add any steps you want to perform after sub-job 1 completes
- 
+
+      - name: Run Composite Action
+        uses: ./.github/actions/sub-action
+        with:
+          example_input: 'value'
