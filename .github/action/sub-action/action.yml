@@ -1,0 +1,15 @@
+name: 'Sub Action'
+description: 'A composite action to run sub-tasks'
+inputs:
+  example_input:
+    description: 'An example input'
+    required: false
+    default: 'default_value'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run sub-job 1 tasks
+      run: |
+        echo "Running sub-job 1"
+        # Add the steps for sub-job 1 here
