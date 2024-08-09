@@ -17,7 +17,7 @@ jobs:
  
       - name: Run Sub-Job 1
         id: subjob1
-        uses: ./.github/workflows/subjob1.yml
+        uses: ./.github/workflows
         # Alternatively, use an action to trigger sub-job 1 if it's a separate action
  
       - name: Complete main job
