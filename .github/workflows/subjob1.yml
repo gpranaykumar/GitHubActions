@@ -1,0 +1,13 @@
+name: Workflow with Sub-Jobs
+ 
+on:
+  workflow_dispatch:
+ 
+jobs:
+  sub-job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run sub-job 1 tasks
+        run: |
+          echo "Running sub-job 1"
+          # Add the steps for sub-job 1 here
